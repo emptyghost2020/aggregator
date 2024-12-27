@@ -35,7 +35,7 @@ PATH = os.path.abspath(os.path.dirname(__file__))
 
 def extract_domain(url) -> str:
     if not url or not re.match(
-        "^(https?://(([a-zA-Z0-9]+-?)+.)+[a-zA-Z]+)(:\d+)?(/.)?(?.)?(#.*)?$", url
+        "^(https?://(([a-zA-Z0-9]+-?)+\.)+[a-zA-Z]+)(:\d+)?(/[\?\.])?(#.*)?$", url
     ):
         return ""
 
